@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "job-bot"
+version = "1.0.0"
+description = "AI-powered job application automation system"
+requires-python = ">=3.11"
+authors = [
+    {name = "Saud"}
+]
+
+[project.scripts]
+job-bot = "src.main:cli"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

@@ -1,0 +1,91 @@
+# ============================================
+# AI Job Application Bot - Configuration
+# ============================================
+
+# Search keywords (job titles & skills to search for)
+keywords:
+  - "Full Stack Developer"
+  - "Next.js Developer"
+  - "NestJS Developer"
+  - "Node.js Developer"
+  - "React Developer"
+  - "Python Developer"
+  - "MERN Stack Developer"
+  - "Software Engineer"
+
+# Salary expectations (annual, INR)
+salary:
+  min: 800000       # 8 LPA
+  max: 2500000      # 25 LPA
+  currency: "INR"
+
+# Preferred locations
+locations:
+  - "Bengaluru"
+  - "Bangalore"
+  - "Hyderabad"
+  - "Remote"
+  - "Hybrid"
+  - "Work from home"
+
+# Job types to include
+job_types:
+  - "Full-time"
+
+# Only apply to jobs posted within this many days
+posted_within_days: 7
+
+# Maximum applications per platform per day
+daily_limits:
+  linkedin: 20
+  naukri: 25
+  hirist: 15
+  indeed: 10
+
+# Companies to skip (case-insensitive)
+blocked_companies:
+  - "SpamCorp"
+  - "MLM Co"
+
+# ============================================
+# Bot Behavior
+# ============================================
+
+# Dry run mode: if true, bot will find & filter jobs but NOT actually apply
+# START WITH THIS ENABLED to verify behavior!
+dry_run: true
+
+# Browser mode
+headless: false          # true = invisible browser, false = visible (safer)
+browser: "chromium"      # chromium | firefox | webkit
+
+# Human-like delay range (milliseconds) between actions
+delay:
+  min_ms: 1500
+  max_ms: 4000
+
+# Resume file path (relative to project root)
+resume_path: "resume/saud-resume.pdf"
+
+# ============================================
+# User Profile (for form filling)
+# ============================================
+profile:
+  full_name: "Shaikh Mohammed Saud"
+  email: "shaikhmohdSaud2004@gmail.com"
+  phone: ""              # Fill in your phone number
+  experience_years: 0    # Years of experience
+  current_company: ""
+  current_title: ""
+  notice_period: "Immediate"
+  linkedin_url: ""       # Your LinkedIn profile URL
+
+# ============================================
+# Scheduler (for automated daily runs)
+# ============================================
+schedule:
+  enabled: false
+  cron_hour: 9           # Run at 9 AM
+  cron_minute: 0
+  days: "mon-fri"        # Weekdays only
+  timezone: "Asia/Kolkata"
